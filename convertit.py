@@ -16,8 +16,9 @@ def pdf_to_image(bytes_data):
 
 def main():
     st.title('ConvertIt to Base64 (Image/PDF)')
+    st.title('by Duncan K')
 
-    uploaded_file = st.file_uploader("Choose a file (JPG, PNG, PDF, up to 2MB)", type=["jpg", "png", "pdf"])
+    uploaded_file = st.file_uploader("Choose a file (JPG, PNG, PDF, up to 2MB)", type=["jpg", "png", "pdf"], label_visibility="collapsed")
     
     if uploaded_file is not None:
         file_size = uploaded_file.size
@@ -49,7 +50,7 @@ def main():
             st.write("Base64 Encoded Output:")
             with st.spinner('Encoding...'):
                 base64_encoded_result = get_base64_encoded_image(bytes_data)
-                st.text_area("", base64_encoded_result, height=400, key="base64_output")
+                st.text_area("Base64 Encoded Output", base64_encoded_result, height=400, key="base64_output", label_visibility="collapsed")
             
             copy_btn = st.button('Copy to Clipboard', key='copy_base64')
             

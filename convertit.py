@@ -15,8 +15,7 @@ def pdf_to_image(bytes_data):
         return img
 
 def main():
-    st.title('ConvertIt to Base64 (Image/PDF)')
-    st.title('by Duncan K')
+    st.title('ConvertIt to Base64 (Image/PDF) by :red[Duncan K]')
 
     uploaded_file = st.file_uploader("Choose a file (JPG, PNG, PDF, up to 2MB)", type=["jpg", "png", "pdf"], label_visibility="collapsed")
     

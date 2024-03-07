@@ -15,7 +15,7 @@ def pdf_to_image(bytes_data):
         return img
 
 def main():
-    st.title('Image/PDF to Base64 Encoder')
+    st.title('ConvertIt to Base64 (Image/PDF)')
 
     uploaded_file = st.file_uploader("Choose a file (JPG, PNG, PDF, up to 2MB)", type=["jpg", "png", "pdf"])
     
